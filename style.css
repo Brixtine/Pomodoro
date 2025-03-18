@@ -1,5 +1,6 @@
 *{
     font-family: cursive;
+    user-select: none;
 }
 body{
     width: 100vw;

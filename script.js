@@ -12,8 +12,15 @@ const reset = document.getElementById("resetBtn");
 const rest = document.getElementById("restBtn");
 const back = document.getElementById("backBtn");
 const stop = document.getElementById("stopTimer");
+const sound = document.getElementById("sound");
 let selectedTime = '';
 let timer = '';
+
+
+function stopSound(){
+    sound.pause();
+    sound.currentTime = 0;
+}
 
 stop.addEventListener("click", () => {
     console.log("Timer stopped!");
@@ -22,9 +29,11 @@ stop.addEventListener("click", () => {
 back.addEventListener("click", () => backToLobby());
 
 function backToLobby(){
+    stopSound();
     clearInterval(timer);
-
     displayTime(0);
+
+    images.forEach(i => i.classList.remove('active'));
 
     lobby.style.display = "flex";
     timerDisplay.style.display = "none";
@@ -35,6 +44,7 @@ function backToLobby(){
 
 
 reset.addEventListener("click", () => {    
+    stopSound();
     lobby.style.display = "none";
     timerDisplay.style.display = "flex";
     timerStopped.style.display = "none";
@@ -44,6 +54,7 @@ reset.addEventListener("click", () => {
 });
 
 rest.addEventListener("click", () => {    
+    stopSound();
     lobby.style.display = "none";
     timerDisplay.style.display = "flex";
     timerStopped.style.display = "none";
@@ -86,8 +97,8 @@ function startTimer(time){
     timerStopped.style.display = "none";
 
     console.log("started");
-    let totalCount = time * 60;
-
+    let totalCount = (time * 60);
+    // let totalCount = 5;
     
     timer = setInterval(() => {
         displayTime(totalCount);
@@ -95,6 +106,7 @@ function startTimer(time){
             totalCount--;
             displayTime(totalCount);
         } else {
+            sound.play();
             clearInterval(timer);
             console.log("Done")
             lobby.style.display = "none";
