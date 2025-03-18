@@ -63,10 +63,13 @@ img{
 }
 #start{
     position: absolute;
-    min-width: 40vh;
-    width: 30%;
-    bottom: 5%;
-    right: 0;
+    width: 15vw;
+    bottom: 5vh;
+    right: 10vw;
+    @media screen and (max-width: 430px) {
+        width: 50vw;
+        right: 20vw;
+    }    
 }
 img:hover{
     filter: drop-shadow(0 0 3px #fff);
@@ -100,14 +103,18 @@ img:hover{
 }
 #stopTimer{
     position: absolute;
-    width: 30vw;
-    top: 40vh;
-    right: 60vw;
+    min-width: 8vw;
+    width: 10vw;
+    top: 45vh;
+    left: -10vw;
+    @media screen and (max-width: 1920px) {
+        top: 30vh;
+    } 
     @media screen and (max-width: 430px) {
-        width: 100vw;
-        top: 25vh;
-        right: 0;
-    }    
+        width: 25vw;
+        top: 28vh;
+        left: 35vw;
+    }     
     transition: 0.3s ease;
 }
 #stopTimer:hover{
