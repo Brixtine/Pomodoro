@@ -13,9 +13,19 @@ const rest = document.getElementById("restBtn");
 const back = document.getElementById("backBtn");
 const stop = document.getElementById("stopTimer");
 const sound = document.getElementById("sound");
+const customBtn = document.getElementById("customTime");
 let selectedTime = '';
 let timer = '';
 
+
+customBtn.addEventListener("click", () => {
+    let input = window.prompt("Enter starting time: (1 to 60 mins)");
+    if(input > 60 || input < 1 || isNaN(input)){
+        alert("Invalid input!");
+        return;
+    } 
+    startTimer(input);
+});
 
 function stopSound(){
     sound.pause();
@@ -98,14 +108,16 @@ function startTimer(time){
 
     console.log("started");
     let totalCount = (time * 60);
+    displayTime(totalCount);
     // let totalCount = 5;
     
     timer = setInterval(() => {
-        displayTime(totalCount);
         if(totalCount > 0){
             totalCount--;
             displayTime(totalCount);
         } else {
+            sound.pause();
+            sound.currentTime = 0;
             sound.play();
             clearInterval(timer);
             console.log("Done")

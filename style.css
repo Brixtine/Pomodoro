@@ -27,6 +27,28 @@ body{
     align-items: center;
     position: relative;
 }
+#customTime{
+    background-color: rgba(94, 94, 94, 0.8);
+    color: white;
+    padding: 2vh 2vh 3vh 2vh;
+    width: 4vw;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 20px;
+    position: absolute;
+    top: 53vh;
+    right: 3vw;
+    @media screen and (max-width: 430px) {
+        top: 61vh;
+        font-size: 30px;
+        padding: 2vh 3vh 3vh 2vh;
+    } 
+}
+#customTime:hover{
+    filter: drop-shadow(0 0 3px #fff);
+    transform: scale(1.1);
+    opacity: 100%;
+}
 img{
     filter: drop-shadow(0 0 15px #000);
     transition: .4s ease;
