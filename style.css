@@ -163,9 +163,10 @@ h1{
 
 @media screen and (max-width: 430px) {
     #customTime{
-    top: 61vh;
-    font-size: 30px;
-    padding: 2vh 3vh 2vh 2vh;
+        font-size: 30px;
+        padding: 2vh 3vh 2vh 2vh;
+        position: fixed;
+        bottom: 25vh;
     }
     #stopTimer{
         width: 25vw;
