@@ -134,3 +134,14 @@ function displayTime(time){
     tSecs.textContent = Math.floor((time%60)/10);
     oSecs.textContent = Math.floor((time%60)%10);
 }
+
+if('serviceWorker' in navigator){
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').then(registration => {
+            console.log("Service worker registered: ", registration);
+        })
+        .catch(error => {
+            console.log("Service worker registration failed: ", error);
+        });
+    });
+}
