@@ -1,17 +1,17 @@
 const CACHE_NAME = "pomodoro-cache-v1";
 const urlsToCache = [
-    "/",
-    "/index.html",
-    "/script.js",
-    "/style.css",
-    "/assets/bgg.png",
-    "/assets/5mins.png",
-    "/assets/10mins.png",
-    "/assets/15mins.png",
-    "/assets/25mins.png",
-    "/assets/stop.png",
-    "/assets/start.png",
-    "/assets/timesUp.mp3",
+    "/pomodoro/",
+    "/pomodoro/index.html",
+    "/pomodoro/script.js",
+    "/pomodoro/style.css",
+    "/pomodoro/assets/bgg.png",
+    "/pomodoro/assets/5mins.png",
+    "/pomodoro/assets/10mins.png",
+    "/pomodoro/assets/15mins.png",
+    "/pomodoro/assets/25mins.png",
+    "/pomodoro/assets/stop.png",
+    "/pomodoro/assets/start.png",
+    "/pomodoro/assets/timesUp.mp3",
 ];
 
 self.addEventListener("install", (e) => {
