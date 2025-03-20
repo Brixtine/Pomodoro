@@ -1,10 +1,10 @@
 {
     "name": "Pomodoro Timer",
-    "short-name": "Pomodoro",
-    "start_url": "/pomodoro/index.html",
+    "short_name": "Pomodoro",
+    "start_url": "/index.html",
     "display": "standalone",
-    "background-color": "#eac3c3",
-    "theme-color": "#121212",
+    "background_color": "#eac3c3",
+    "theme_color": "#121212",
     "icons": [
         {
             "src": "/assets/icon-192.png",
