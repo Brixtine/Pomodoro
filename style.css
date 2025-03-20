@@ -33,17 +33,14 @@ body{
     padding: 2vh 2vh 3vh 2vh;
     width: 4vw;
     text-align: center;
-    font-size: 30px;
+    font-size: 2vw;
     border-radius: 20px;
-    position: absolute;
-    top: 53vh;
-    right: 3vw;
-    @media screen and (max-width: 430px) {
-        top: 61vh;
-        font-size: 30px;
-        padding: 2vh 3vh 2vh 2vh;
-    } 
+    position: fixed;
+    bottom: 30vh;
+    right: 8vw;
+    z-index: 999;
 }
+
 #customTime:hover{
     filter: drop-shadow(0 0 3px #fff);
     transform: scale(1.1);
@@ -88,10 +85,6 @@ img{
     width: 15vw;
     bottom: 5vh;
     right: 10vw;
-    @media screen and (max-width: 430px) {
-        width: 50vw;
-        right: 20vw;
-    }    
 }
 img:hover{
     filter: drop-shadow(0 0 3px #fff);
@@ -129,14 +122,6 @@ img:hover{
     width: 10vw;
     top: 45vh;
     left: -10vw;
-    @media screen and (max-width: 1920px) {
-        top: 30vh;
-    } 
-    @media screen and (max-width: 430px) {
-        width: 25vw;
-        top: 28vh;
-        left: 35vw;
-    }     
     transition: 0.3s ease;
 }
 #stopTimer:hover{
@@ -174,4 +159,26 @@ h1{
 }
 .optBtn:hover{
     filter: drop-shadow(0 0 3px #fff);
+}
+
+@media screen and (max-width: 430px) {
+    #customTime{
+    top: 61vh;
+    font-size: 30px;
+    padding: 2vh 3vh 2vh 2vh;
+    }
+    #stopTimer{
+        width: 25vw;
+        top: 28vh;
+        left: 35vw;
+    }
+    #start{   
+        width: 50vw;
+        right: 20vw; 
+    }
+} 
+@media screen and (max-width: 1920px) {
+    #stopTimer{
+        top: 30vh;
+    }
 }
